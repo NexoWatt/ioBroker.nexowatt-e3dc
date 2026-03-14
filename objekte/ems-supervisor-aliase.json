@@ -1,0 +1,147 @@
+{
+  "beschreibung": "Kuratiertes Mapping der wichtigsten EMS-Punkte für ein übergeordnetes EMS. Diese Punkte werden im Adapter zusätzlich unter objekte.ems.* gespiegelt.",
+  "wurzel": "objekte.ems",
+  "gruppen": {
+    "system": [
+      {
+        "id": "objekte.ems.system.verbunden",
+        "quelle": "info.connection",
+        "zugriff": "read"
+      },
+      {
+        "id": "objekte.ems.system.authentifizierung",
+        "quelle": "RSCP.AUTHENTICATION",
+        "zugriff": "read"
+      },
+      {
+        "id": "objekte.ems.system.letzterFehler",
+        "quelle": "info.lastError",
+        "zugriff": "read"
+      }
+    ],
+    "messwerte": [
+      {
+        "id": "objekte.ems.messwerte.pvLeistung",
+        "quelle": "EMS.POWER_PV",
+        "zugriff": "read",
+        "einheit": "W"
+      },
+      {
+        "id": "objekte.ems.messwerte.batterieLeistung",
+        "quelle": "EMS.POWER_BAT",
+        "zugriff": "read",
+        "einheit": "W"
+      },
+      {
+        "id": "objekte.ems.messwerte.hausLeistung",
+        "quelle": "EMS.POWER_HOME",
+        "zugriff": "read",
+        "einheit": "W"
+      },
+      {
+        "id": "objekte.ems.messwerte.netzLeistung",
+        "quelle": "EMS.POWER_GRID",
+        "zugriff": "read",
+        "einheit": "W"
+      },
+      {
+        "id": "objekte.ems.messwerte.zusatzLeistung",
+        "quelle": "EMS.POWER_ADD",
+        "zugriff": "read",
+        "einheit": "W"
+      },
+      {
+        "id": "objekte.ems.messwerte.batterieSoc",
+        "quelle": "EMS.BAT_SOC",
+        "zugriff": "read",
+        "einheit": "%"
+      },
+      {
+        "id": "objekte.ems.messwerte.autarkie",
+        "quelle": "EMS.AUTARKY",
+        "zugriff": "read",
+        "einheit": "%"
+      },
+      {
+        "id": "objekte.ems.messwerte.eigenverbrauch",
+        "quelle": "EMS.SELF_CONSUMPTION",
+        "zugriff": "read",
+        "einheit": "%"
+      },
+      {
+        "id": "objekte.ems.messwerte.modusIst",
+        "quelle": "EMS.MODE",
+        "zugriff": "read"
+      },
+      {
+        "id": "objekte.ems.messwerte.restLadeLeistung",
+        "quelle": "EMS.REMAINING_BAT_CHARGE_POWER",
+        "zugriff": "read",
+        "einheit": "W"
+      },
+      {
+        "id": "objekte.ems.messwerte.restEntladeLeistung",
+        "quelle": "EMS.REMAINING_BAT_DISCHARGE_POWER",
+        "zugriff": "read",
+        "einheit": "W"
+      },
+      {
+        "id": "objekte.ems.messwerte.setPowerRueckmeldung",
+        "quelle": "EMS.SET_POWER",
+        "zugriff": "read",
+        "einheit": "W"
+      }
+    ],
+    "steuerung": [
+      {
+        "id": "objekte.ems.steuerung.modusSoll",
+        "quelle": "EMS.SET_POWER_MODE",
+        "zugriff": "readwrite"
+      },
+      {
+        "id": "objekte.ems.steuerung.leistungSoll",
+        "quelle": "EMS.SET_POWER_VALUE",
+        "zugriff": "readwrite",
+        "einheit": "W"
+      },
+      {
+        "id": "objekte.ems.steuerung.powerLimitsAktiv",
+        "quelle": "EMS.POWER_LIMITS_USED",
+        "zugriff": "readwrite"
+      },
+      {
+        "id": "objekte.ems.steuerung.maxLadeLeistung",
+        "quelle": "EMS.MAX_CHARGE_POWER",
+        "zugriff": "readwrite",
+        "einheit": "W"
+      },
+      {
+        "id": "objekte.ems.steuerung.maxEntladeLeistung",
+        "quelle": "EMS.MAX_DISCHARGE_POWER",
+        "zugriff": "readwrite",
+        "einheit": "W"
+      },
+      {
+        "id": "objekte.ems.steuerung.entladeStartLeistung",
+        "quelle": "EMS.DISCHARGE_START_POWER",
+        "zugriff": "readwrite",
+        "einheit": "W"
+      },
+      {
+        "id": "objekte.ems.steuerung.powersaveAktiv",
+        "quelle": "EMS.POWERSAVE_ENABLED",
+        "zugriff": "readwrite"
+      },
+      {
+        "id": "objekte.ems.steuerung.wettergeregeltesLadenAktiv",
+        "quelle": "EMS.WEATHER_REGULATED_CHARGE_ENABLED",
+        "zugriff": "readwrite"
+      },
+      {
+        "id": "objekte.ems.steuerung.idlePeriodsJson",
+        "quelle": "EMS.IDLE_PERIODS_JSON",
+        "zugriff": "readwrite"
+      }
+    ]
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "common": {
+    "name": "nexowatt-e3dc",
+    "version": "0.3.0",
+    "news": {
+      "0.3.0": {
+        "en": "Added curated EMS supervisor points under objekte.ems with mirrored read/write states and object mapping files",
+        "de": "Kuratierten EMS-Leitwartenbereich unter objekte.ems ergänzt, inklusive gespiegelter Lese-/Schreibpunkte und Objekt-Mapping-Dateien"
+      },
+      "0.2.0": {
+        "en": "Extended RSCP adapter with official tag map, BAT/PVI/WB polling and idle periods JSON read/write",
+        "de": "Erweiterter RSCP-Adapter mit offiziellem Tag-Mapping, BAT/PVI/WB-Polling und Idle-Periods JSON Read/Write"
+      },
+      "0.1.0": {
+        "en": "Initial MVP with RSCP read/write support for E3/DC EMS control",
+        "de": "Erstes MVP mit RSCP-Lese-/Schreibsupport für die EMS-Steuerung von E3/DC"
+      }
+    },
+    "titleLang": {
+      "en": "Nexowatt E3DC RSCP",
+      "de": "Nexowatt E3DC RSCP"
+    },
+    "desc": {
+      "en": "ioBroker adapter for E3/DC RSCP systems with EMS control, BAT/PVI/WB telemetry and raw RSCP access",
+      "de": "ioBroker-Adapter für E3/DC-RSCP-Systeme mit EMS-Steuerung, BAT/PVI/WB-Telemetrie und rohem RSCP-Zugriff"
+    },
+    "authors": [
+      "Nexowatt"
+    ],
+    "platform": "Javascript/Node.js",
+    "mode": "daemon",
+    "type": "energy",
+    "icon": "e3dc.png",
+    "enabled": true,
+    "extIcon": "",
+    "readme": "",
+    "loglevel": "info",
+    "compact": true,
+    "connectionType": "local",
+    "dataSource": "poll",
+    "adminUI": {
+      "config": "json"
+    },
+    "dependencies": [
+      {
+        "js-controller": ">=5.0.0"
+      }
+    ],
+    "globalDependencies": [
+      {
+        "admin": ">=6.0.0"
+      }
+    ]
+  },
+  "native": {
+    "host": "",
+    "port": 5033,
+    "portalUser": "",
+    "portalPassword": "",
+    "rscpPassword": "",
+    "pollIntervalSec": 15,
+    "reconnectDelaySec": 30,
+    "requestTimeoutMs": 8000,
+    "setPowerResendSec": 5,
+    "pollEms": true,
+    "enableBat": true,
+    "batIndices": "0",
+    "enablePvi": true,
+    "pviIndices": "0",
+    "pviPhaseIndices": "0,1,2",
+    "pviStringIndices": "0,1",
+    "enableWb": false,
+    "wbIndices": "0",
+    "enableIdlePeriods": true
+  },
+  "objects": [],
+  "instanceObjects": []
+}

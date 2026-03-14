@@ -1,0 +1,244 @@
+{
+  "i18n": true,
+  "type": "tabs",
+  "items": {
+    "connection": {
+      "type": "panel",
+      "label": {
+        "en": "Connection",
+        "de": "Verbindung"
+      },
+      "items": {
+        "_headline": {
+          "type": "staticText",
+          "newLine": true,
+          "text": {
+            "en": "Configure the local RSCP connection to your E3/DC system.",
+            "de": "Konfiguriere die lokale RSCP-Verbindung zu deinem E3/DC-System."
+          }
+        },
+        "host": {
+          "type": "text",
+          "label": {
+            "en": "E3/DC IP address",
+            "de": "E3/DC IP-Adresse"
+          },
+          "sm": 6,
+          "newLine": true
+        },
+        "port": {
+          "type": "number",
+          "label": {
+            "en": "RSCP port",
+            "de": "RSCP-Port"
+          },
+          "min": 1,
+          "max": 65535,
+          "sm": 6
+        },
+        "portalUser": {
+          "type": "text",
+          "label": {
+            "en": "Portal user",
+            "de": "Portal-Benutzer"
+          },
+          "sm": 6,
+          "newLine": true
+        },
+        "portalPassword": {
+          "type": "password",
+          "label": {
+            "en": "Portal password",
+            "de": "Portal-Passwort"
+          },
+          "sm": 6
+        },
+        "rscpPassword": {
+          "type": "password",
+          "label": {
+            "en": "RSCP password",
+            "de": "RSCP-Passwort"
+          },
+          "sm": 6,
+          "newLine": true
+        }
+      }
+    },
+    "polling": {
+      "type": "panel",
+      "label": {
+        "en": "Polling",
+        "de": "Polling"
+      },
+      "items": {
+        "_headline": {
+          "type": "staticText",
+          "newLine": true,
+          "text": {
+            "en": "Adjust request intervals and write resend behavior.",
+            "de": "Hier stellst du Polling-Intervalle und das Wiederholen von Schreibbefehlen ein."
+          }
+        },
+        "pollIntervalSec": {
+          "type": "number",
+          "label": {
+            "en": "Polling interval (s)",
+            "de": "Polling-Intervall (s)"
+          },
+          "min": 5,
+          "sm": 3,
+          "newLine": true
+        },
+        "requestTimeoutMs": {
+          "type": "number",
+          "label": {
+            "en": "Request timeout (ms)",
+            "de": "Request-Timeout (ms)"
+          },
+          "min": 1000,
+          "sm": 3
+        },
+        "reconnectDelaySec": {
+          "type": "number",
+          "label": {
+            "en": "Reconnect delay (s)",
+            "de": "Reconnect-Verzögerung (s)"
+          },
+          "min": 5,
+          "sm": 3
+        },
+        "setPowerResendSec": {
+          "type": "number",
+          "label": {
+            "en": "SET_POWER resend interval (s)",
+            "de": "SET_POWER Wiederholung (s)"
+          },
+          "min": 0,
+          "sm": 3
+        },
+        "pollEms": {
+          "type": "checkbox",
+          "label": {
+            "en": "Poll EMS states",
+            "de": "EMS-States pollen"
+          },
+          "newLine": true,
+          "sm": 4
+        },
+        "enableIdlePeriods": {
+          "type": "checkbox",
+          "label": {
+            "en": "Read/write idle periods JSON",
+            "de": "Idle-Periods JSON lesen/schreiben"
+          },
+          "sm": 4
+        }
+      }
+    },
+    "namespaces": {
+      "type": "panel",
+      "label": {
+        "en": "Namespaces",
+        "de": "Namespaces"
+      },
+      "items": {
+        "_headline": {
+          "type": "staticText",
+          "newLine": true,
+          "text": {
+            "en": "Enable optional BAT/PVI/WB polling and define the exact indices to request.",
+            "de": "Aktiviere optionales BAT/PVI/WB-Polling und lege die exakten Indizes fest."
+          }
+        },
+        "enableBat": {
+          "type": "checkbox",
+          "label": {
+            "en": "Enable BAT namespace",
+            "de": "BAT-Namespace aktivieren"
+          },
+          "newLine": true,
+          "sm": 4
+        },
+        "batIndices": {
+          "type": "text",
+          "label": {
+            "en": "BAT indices",
+            "de": "BAT-Indizes"
+          },
+          "help": {
+            "en": "Comma-separated list, e.g. 0",
+            "de": "Kommagetrennte Liste, z. B. 0"
+          },
+          "sm": 8
+        },
+        "enablePvi": {
+          "type": "checkbox",
+          "label": {
+            "en": "Enable PVI namespace",
+            "de": "PVI-Namespace aktivieren"
+          },
+          "newLine": true,
+          "sm": 4
+        },
+        "pviIndices": {
+          "type": "text",
+          "label": {
+            "en": "PVI indices",
+            "de": "PVI-Indizes"
+          },
+          "help": {
+            "en": "Comma-separated list, e.g. 0",
+            "de": "Kommagetrennte Liste, z. B. 0"
+          },
+          "sm": 8
+        },
+        "pviPhaseIndices": {
+          "type": "text",
+          "label": {
+            "en": "PVI AC phase indices",
+            "de": "PVI AC-Phasenindizes"
+          },
+          "help": {
+            "en": "Exact RSCP phase indices, e.g. 0,1,2",
+            "de": "Exakte RSCP-Phasenindizes, z. B. 0,1,2"
+          },
+          "newLine": true,
+          "sm": 6
+        },
+        "pviStringIndices": {
+          "type": "text",
+          "label": {
+            "en": "PVI DC string indices",
+            "de": "PVI DC-Stringindizes"
+          },
+          "help": {
+            "en": "Exact RSCP string indices, e.g. 0,1",
+            "de": "Exakte RSCP-Stringindizes, z. B. 0,1"
+          },
+          "sm": 6
+        },
+        "enableWb": {
+          "type": "checkbox",
+          "label": {
+            "en": "Enable WB namespace",
+            "de": "WB-Namespace aktivieren"
+          },
+          "newLine": true,
+          "sm": 4
+        },
+        "wbIndices": {
+          "type": "text",
+          "label": {
+            "en": "WB indices",
+            "de": "WB-Indizes"
+          },
+          "help": {
+            "en": "Comma-separated list, e.g. 0",
+            "de": "Kommagetrennte Liste, z. B. 0"
+          },
+          "sm": 8
+        }
+      }
+    }
+  }
+}

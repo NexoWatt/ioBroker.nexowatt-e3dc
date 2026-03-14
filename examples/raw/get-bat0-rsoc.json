@@ -1,0 +1,16 @@
+{
+  "items": [
+    {
+      "tag": "TAG_BAT_REQ_DATA",
+      "children": [
+        {
+          "tag": "TAG_BAT_INDEX",
+          "value": 0
+        },
+        {
+          "tag": "TAG_BAT_REQ_RSOC"
+        }
+      ]
+    }
+  ]
+}

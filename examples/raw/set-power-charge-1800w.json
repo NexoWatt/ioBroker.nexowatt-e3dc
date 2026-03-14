@@ -1,0 +1,17 @@
+{
+  "items": [
+    {
+      "tag": "TAG_EMS_REQ_SET_POWER",
+      "children": [
+        {
+          "tag": "TAG_EMS_REQ_SET_POWER_MODE",
+          "value": 3
+        },
+        {
+          "tag": "TAG_EMS_REQ_SET_POWER_VALUE",
+          "value": 1800
+        }
+      ]
+    }
+  ]
+}
