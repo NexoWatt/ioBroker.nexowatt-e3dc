@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "nexowatt-e3dc",
-    "version": "0.3.0",
+    "version": "0.3.1",
     "news": {
       "0.3.0": {
         "en": "Added curated EMS supervisor points under objekte.ems with mirrored read/write states and object mapping files",
