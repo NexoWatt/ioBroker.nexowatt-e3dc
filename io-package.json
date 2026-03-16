@@ -74,5 +74,6 @@
     "enableIdlePeriods": true
   },
   "objects": [],
-  "instanceObjects": []
+  "instanceObjects": [],
+  "version": "0.3.2"
 }

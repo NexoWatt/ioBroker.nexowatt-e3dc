@@ -1,6 +1,6 @@
 {
   "name": "iobroker.nexowatt-e3dc",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "ioBroker adapter for E3/DC RSCP systems with EMS read/write support plus BAT, PVI, WB and idle periods",
   "author": "Nexowatt",
   "license": "MIT",

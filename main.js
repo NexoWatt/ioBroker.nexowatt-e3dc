@@ -1132,6 +1132,7 @@ class NexowattE3dc extends utils.Adapter {
 
         this.client.on('connected', () => {
             this.log.info(`Connected to E3/DC at ${this.config.host}:${this.config.port}`);
+            this.log.info(`Connection parameters: portalUserLen=${String(this.config.portalUser || '').length}, portalPasswordLen=${String(this.config.portalPassword || '').length}, rscpPasswordLen=${String(this.config.rscpPassword || '').length}, rscpPasswordUtf8Bytes=${Buffer.byteLength(String(this.config.rscpPassword || ''), 'utf8')}`);
             this.setStateMirrored('info.connection', true, true);
             this.setStateMirrored('info.lastError', '', true);
         });
@@ -1165,6 +1166,9 @@ class NexowattE3dc extends utils.Adapter {
 
         this.client.on('error', error => {
             this.log.warn(`RSCP error: ${error.message}`);
+            if (/before authentication/.test(error.message)) {
+                this.log.warn('Likely causes: wrong RSCP password/AES key, non-ASCII/special characters in the RSCP password, or client not in the same IP subnet as the E3/DC.');
+            }
             this.setStateMirrored('info.lastError', error.message, true);
         });
 

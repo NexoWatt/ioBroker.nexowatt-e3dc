@@ -273,3 +273,10 @@ Siehe:
 - Nicht jedes E3/DC-System liefert jeden Namespace oder jeden Index zurück.
 - Die Antwortform einzelner Tags kann je nach Firmware abweichen.
 - Der Adapter ist syntaktisch geprüft, aber ohne Live-System nicht vollständig hardwarevalidiert.
+
+
+## 0.3.2
+
+- bessere RSCP-Verbindungsdiagnose bei Auth-/Subnetz-Problemen
+- Warnung bei nicht-ASCII RSCP-Schlüsseln
+- TCP_NODELAY beim Socket aktiviert
